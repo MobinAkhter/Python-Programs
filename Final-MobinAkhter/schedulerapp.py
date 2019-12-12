@@ -6,10 +6,16 @@ class  SchedulerApp:
     def run(self):
         numTask=0
         print("Please enter the tasks to schedule")
-        descriptionOfTask= input("Please enter the description of your task: ")
-        durationOfTask = int(input("Please enter the duration of your task: "))
+        descriptionOfTask= input("Task Duration: ")
+        try:
+            durationOfTask = int(input("Please enter the duration of your task: "))
+        except ValueError:
+            print("Please enter integers or floats only")
         print("What type of task do you want to be created?")
-        taskType = int(input("1. Regular\n 2. Research\n 3. Design\n 4. Implementation "))
+        try:
+            taskType = int(input("1. Regular\n 2. Research\n 3. Design\n 4. Implementation "))
+        except ValueError:
+            print("Please enter integers only")
         if taskType == 1:
             pass
         elif taskType == 2:
@@ -24,11 +30,11 @@ class  SchedulerApp:
                 descriptionOfTask= input("Please enter the description of your task: ")
                 durationOfTask = int(input("Please enter the duration of your task: "))
                 if durationOfTask < 0:
-                    print("Incorrect time inputted.")
+                    print("An error occurred in the program.")
                 elif durationOfTask > 100:
-                    print("Your task is too long.")
+                    print("An error occurred in the program.")
                 elif durationOfTask == 0:
-                    print("Your task can not be done in no time!")
+                    print("An error occurred in the program!")
                 else:
                     print("Your duration of task "+descriptionOfTask)
                 print("What type of task do you want to be created?")
