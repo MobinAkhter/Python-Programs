@@ -1,0 +1,2 @@
+class ImplementationTask(Task):
+    pass

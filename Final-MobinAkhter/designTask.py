@@ -1,0 +1,2 @@
+class DesignTask(Task):
+    pass

@@ -1,0 +1,2 @@
+class ResearchTask(Task):
+    pass
