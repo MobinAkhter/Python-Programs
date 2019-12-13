@@ -78,8 +78,26 @@ class Application(Frame,CRUD):
     def addBook(self):
         book = input("Add book: ")
         CRUD.create(self,book)
+    
     def deleteBook(self):
         CRUD.delete(self, book) # Uses the delete method in crud module
 
-        
-        
+    def searchABook(self, *args):
+        book = input("Search a book: ")
+        CRUD.Search(self, book)
+        choice = input("Press y/Y to continue or n/N t end the application.")
+        if choice.lower() == "y" or choice.lower() == "yes":
+            while False:
+                print("Here is the list of options to choose from: ")
+                list_of_options = {
+                    1: "Add a book",
+                    2: "Search a book",
+                    3: "Delete a book",
+                    4: "Search all the library books",
+                    5: "Exit"
+                }        
+        elif choice.lower() == "n" or choice.lower() == "no":
+            print("Good-Bye!")
+            sys.exit()
+        else:
+            print("You did not enter what you were supposed to!\nGood-Bye!")
