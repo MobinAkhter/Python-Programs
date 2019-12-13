@@ -59,4 +59,6 @@ class CRUD:
         else:
             print(book_name, "does not exists in the library")
             return False
-            
+
+lib = Library().dict
+crud = CRUD()
