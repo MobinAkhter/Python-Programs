@@ -37,4 +37,26 @@ class CRUD:
             else:
                 print("Not a valid entry")
                 raise ValueError
+    def search(self, book_name):
+        if book_name in lib:
+            print("search details", "\n", "book name\t:\t", lib[book_name]["name"]
+            , "\n", "author\t\t:\t", lib[book_name]["author"]
+            , "\n", "price\t\t:\t", lib[book_name]["price"])
+            return True
+        else:
+            print("Sorry!", book_name, "does not exist in your library ")
+            return False
+    def delete(self, book_name):
+        if book_name in lib:
+            print(lib.pop(book_name), "has been deleted from the library")
+
+            j = json.dumps(lib)
+            f = open("data.json", "w")
+            f.write(j)
+            print("Your book has been removed from the library")
+            f.close()
+            return True
+        else:
+            print(book_name, "does not exists in the library")
+            return False
             
