@@ -1,4 +1,4 @@
-import json 
+import json # Using json rather than csv. 
 class Library:
     def __init__(self):
         self.dict= None 
