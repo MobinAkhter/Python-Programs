@@ -7,6 +7,7 @@ class CRUD:
 
     def create(self, book_name):
         if book_name not in lib:
+            # Exception handling below
             try:
                 author_name= input("Author name: ")
                 if len(author_name) ==0 or author_name.strip() == "":

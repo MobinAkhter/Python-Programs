@@ -80,6 +80,7 @@ class Application(Frame,CRUD):
         CRUD.create(self,book)
     
     def deleteBook(self):
+        book = input("Delete book: ")
         CRUD.delete(self, book) # Uses the delete method in crud module
 
     def searchABook(self, *args):
