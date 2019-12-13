@@ -37,6 +37,7 @@ class CRUD:
             else:
                 print("Not a valid entry")
                 raise ValueError
+    # The method below lists out all the books that exist in the libraray. 
     def search(self, book_name):
         if book_name in lib:
             print("search details", "\n", "book name\t:\t", lib[book_name]["name"]
